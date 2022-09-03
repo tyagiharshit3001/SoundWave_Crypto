@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>SoundWave - Transaction</title>
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+	{% include 'includes/_messages.html' %}
+	{% from 'includes/_formhelpers.html' import render_field %}
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="script" href="app.js">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="top">
+			<h1 id="title" class="hidden"><span id="logo">SoundWave <span>Cryptos</span></span></h1>
+		</div>
+		<div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>Transaction Page</h2>
+			</div>
+			<form method="POST" action="">
+				<label>
+					<h4>Current Balance: {{balance}} SWC</h4>
+				</label>
+				<br>
+				<label for="username">Username</label>
+				<br/>
+				<input type="text" id="username" name="username" value={{request.form.username}}>
+				<br/>
+				<label for="amount">Amount</label>
+				<br/>
+				<input type="text" id="amount" name="amount" value={{request.form.amount}}>
+				<br/>
+				<button type="submit">Send</button>
+				<br/>
+				<a href="/log_out"><p class="small">Log Out</p></a>
+				<br/>
+				<a href="/dashboard"><p class="small">Dashboard</p></a>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

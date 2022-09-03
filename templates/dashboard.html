@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>SoundWave-Dashboard</title>
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="script" href="app.js">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container"  style="min-width: 1000px; margin-left: 100px">
+		<div class="top"  style="min-width: 1000px">
+			<h1 id="title" class="hidden"><span id="logo"  style="min-width: 1000px">SoundWave <span>Cryptos</span></span></h1>
+		</div>
+		<div class="login-box animated fadeInUp"  style="min-width: 1000px">
+			<div class="box-header">
+				<h2>Dashboard</h2>
+			</div>
+			<p style="text-align: -moz-left">Hello, {{session.get('name')}}</p>
+			<br/>
+			<label>
+				<h4 style="text-align: left">Current Balance: {{balance}} SWC</h4>
+			</label>
+			<div>
+				<table class="table-warning" style="min-height: fit-content; min-width: 1000px">
+					<tr class="table-warning" style="text-align: center">
+						<th class="table-warning">#</th>
+						<th class="table-warning">Transaction</th>
+						<th class="table-warning">Hash</th>
+						<th class="table-warning">Time</th>
+					</tr>
+					{% for block in blockchain %}
+					<tr class="table-warning" style="">
+						<td class="table-warning" style="max-width: 50px; min-height: 10px; min-width: 50px; padding: 5px; border-spacing: 5px">{{block.number}}</td>
+						<td class="table-warning" style="max-width: 450px; min-width: fit-content">{{block.data}}</td>
+						<td class="table-warning" style="max-width: 575px; min-width: fit-content">{{block.hash()}}</td>
+						<td class="table-warning" style="max-width: 100px; min-width: fit-content">{{trans_time}}</td>
+					</tr>
+					{% endfor %}
+
+				</table>
+			</div>
+			<br/>
+				<a href="/log_out"><p class="small">Log Out</p></a>
+				<a href="/transaction"><p class="small">Send Crypto Here!!!</p></a>
+				<a href="/buy"><p class="small">Buy Crypto Here!!!</p></a>
+
+<!--			<br/>
+				<input type="text" id="username">
+				<br/>
+				<label for="password">Password</label>
+				<br/>
+				<input type="password" id="password">
+				<br/>
+				<button type="submit">Sign In</button>
+				<br/>
+				<a href="#"><p class="small">Forgot your password?</p></a>
+				<br/>
+				<a href="/register"><p class="small">Register?</p></a>
+-->
+
+		</div>
+	</div>
+</body>
+
+</html>
