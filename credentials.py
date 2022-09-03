@@ -1,0 +1,5 @@
+h_username = 'root'
+h_password = 'password'
+h_database = 'crypto'
+h_host = 'localhost'
+h_secret_Key = 'secret123'
