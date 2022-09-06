@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>SoundWave Crypto</title>
+
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="./css/animate.css">
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="script" href="app.js">
+	<link rel="stylesheet" href="animate.css">
+	<link rel="stylesheet" href="style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="top">
+			<h1 id="title" class="hidden"><span id="logo">SoundWave <span>Cryptos</span></span></h1>
+		</div>
+		<div class="login-box animated fadeInUp">
+			<div class="box-header">
+				<h2>Welcome to the Crypto World...</h2>
+			</div>
+			{% include 'includes/_messages.html' %}
+			<form method="POST" action="">
+				<div>
+					<label style="text-transform: none; font-weight: 400">
+					<h3>What is cryptocurrency? </h3>
+					A <b>Cryptocurrency</b> is a digital currency, which is an alternative form of payment created using encryption algorithms.
+					The use of encryption technologies means that cryptocurrencies function both as a currency and as a virtual accounting system.
+					To use cryptocurrencies, you need a cryptocurrency wallet.
+					<br/>
+					<b>SoundWave</b> crypto is the most secure, robust and decentralized digital currency that can be transferred on the peer-to-peer SoundWave
+					network. SoundWave transactions are verified by network node through cryptograpy and recorded in a public distributed ledger called BlockChain.
+					</label>
+				</div>
+				<a href="/login"><p class="small">Log In</p></a>
+				<a href="/register"><p class="small">Don't have account? Register now.</p></a>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>
